@@ -2,7 +2,7 @@ import System.IO
 import System.Process
 
 parse :: [String] -> String
-parse [] = "Up to date"
+parse [] = "0" --"Up to date"
 parse ("error:":t) = "Error"
 parse ("Targets":a:t) = (tail $ init $ init a) -- ++ " new packages"
 parse (h:t) = parse t
